@@ -9,7 +9,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    axios.get('https://tax-busj.onrender.com/')
+    axios.get('https://tax-uwyo.onrender.com/')
       .then(response => setMessage(response.data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);

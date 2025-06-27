@@ -29,7 +29,7 @@ const TaxForm = () => {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       try {
-        const response = await axios.post("https://tax-busj.onrender.com/api/calculate-tax", values);
+        const response = await axios.post("https://tax-uwyo.onrender.com/api/calculate-tax", values);
         console.log("Response:", response.data);
 
         // Navigate to result page with tax calculation data

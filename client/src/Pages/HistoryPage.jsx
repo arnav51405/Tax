@@ -27,7 +27,7 @@ const HistoryPage = () => {
   // Fetch history records from the backend
   const fetchHistory = async () => {
     try {
-      const response = await axios.get("https://tax-busj.onrender.com/api/tax-history");
+      const response = await axios.get("https://tax-uwyo.onrender.com/api/tax-history");
       setRecords(response.data);
     } catch (error) {
       console.error("Error fetching history:", error);
@@ -55,7 +55,7 @@ const HistoryPage = () => {
     // Prevent modal open when clicking the delete button
     event.stopPropagation();
     try {
-      await axios.delete(`https://tax-busj.onrender.com/api/tax-history/${id}`);
+      await axios.delete(`https://tax-uwyo.onrender.com/api/tax-history/${id}`);
       // Remove deleted record from the state
       setRecords(records.filter(record => record.id !== id));
     } catch (error) {
